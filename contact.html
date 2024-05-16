@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css\style.css" />
+    <title>The Damn Portfolio</title>
+  </head>
+  <body style="height: 700px">
+    <!-- Header Nav -->
+    <header class="bg-slate-300 lg:bg-gray-900 absolute top-0 right-0 w-full flex items-center z-10">
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a href="index.html" class="font-bold text-lg lg:text-purple2 text-slate-900 block py-6 lg:right-0">My Journey</a>
+          </div>
+        </div>
+        <div class="flex items-center px-4">
+          <button id="hamburger" name="hamburger" type="button" class="block absolute right-0 top-0 m-5 lg:hidden">
+            <span class="my-2 block h-[2px] w-[30px] bg-slate-800 transition duration-300 ease-in-out origin-bottom-left"></span>
+            <span class="my-2 block h-[2px] w-[30px] bg-slate-800 transition duration-300 ease-in-out"></span>
+            <span class="my-2 block h-[2px] w-[30px] bg-slate-800 transition duration-300 ease-in-out origin-bottom-left"></span>
+          </button>
+
+          <nav
+            id="nav-menu"
+            class="hidden absolute py-5 dark:bg-gray-800 shadow-lg lg:shadow-purple-500/80 lg:hover:shadow-cyan-200/80 lg:transition lg:duration-200 lg:ease-in-out rounded-lg max-w-[250px] w-full right-0 top-full lg:block lg:bg-transparent lg:max-w-full lg:right-0 lg:-top-[4px]"
+          >
+            <ul class="block lg:flex lg:justify-center">
+              <li class="group">
+                <a href="index.html" class="text-base text-purple2 py-2 mx-8 font-bold group-hover:text-cyan-200 transition duration-200 flex">Home</a>
+              </li>
+              <li class="group">
+                <a href="project.html" class="text-base text-purple2 py-2 mx-8 font-bold transition duration-200 group-hover:text-cyan-200 flex">Project</a>
+              </li>
+              <li class="group">
+                <a href="contact.html" class="text-base text-purple2 py-2 mx-8 font-bold transition duration-200 group-hover:text-cyan-200 flex">Contact</a>
+              </li>
+              <li class="group">
+                <a href="nothing.html" class="text-base text-purple2 py-2 mx-8 font-bold transition duration-200 group-hover:text-cyan-200 flex">Nothing Here</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- contact -->
+    <section id="contact" class="pt-36 pb-32">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-cyan1 mb-2">Contact</h4>
+            <h2 class="font-bold text-slate-900 text-3xl mb-4 sm:text-4xl lg:text-5xl">Call Your Daddy Here</h2>
+            <p class="font-medium text-slate-500 md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, illo.</p>
+          </div>
+        </div>
+
+        <form >
+          <div class="w-full lg:w-2/4 lg:mx-auto">
+            <div class="w-full px-4 mb-8">
+              <label for="name" class="text-base font-bold text-cyan1">Name:</label>
+              <input type="text" id="name" class="w-full bg-slate-300 text-slate-900 p-3 rounded-md focus:outline-none focus:ring-offset-cyan1 focus:ring-1 focus:border-cyan1"></input>
+            </div>
+          </form>
+          
+          <form >
+            <div class="w-full px-4 mb-8">
+              <label for="email" class="text-base font-bold text-cyan1">Email:</label>
+            <input type="text" id="email" class="w-full bg-slate-300 text-slate-900 p-3 rounded-md focus:outline-none focus:ring-offset-cyan1 focus:ring-1 focus:border-cyan1"></input>
+          </div>
+        </form>
+        
+        <form >
+          <div class="w-full px-4 mb-8">
+            <label for="message" class="text-base font-bold text-cyan1">Message:</label>
+            <textarea type="text" id="message" placeholder="" class="w-full bg-slate-300 text-slate-900 p-3 rounded-md focus:outline-none focus:ring-offset-cyan1 focus:ring-1 focus:border-cyan1 h-32"></textarea>
+          </div>
+          <div class="w-full px-4">
+            <button class="text-base font-bold text-white bg-cyan1 py-3 px-8 rounded-full w-full hover:bg-cyan-600 hover:shadow-lg transition duration-500">Send</button>
+            </div>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+  </section>
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css\style.css" />
+    <title>The Damn Portfolio</title>
+  </head>
+  <body style="height: 700px">
+    <!-- Header Nav -->
+    <header class="bg-slate-300 lg:bg-gray-900 absolute top-0 right-0 w-full flex items-center z-10">
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a href="index.html" class="font-bold text-lg lg:text-purple2 text-slate-900 block py-6 lg:right-0">My Journey</a>
+          </div>
+        </div>
+        <div class="flex items-center px-4">
+          <button id="hamburger" name="hamburger" type="button" class="block absolute right-0 top-0 m-5 lg:hidden">
+            <span class="my-2 block h-[2px] w-[30px] bg-slate-800 transition duration-300 ease-in-out origin-bottom-left"></span>
+            <span class="my-2 block h-[2px] w-[30px] bg-slate-800 transition duration-300 ease-in-out"></span>
+            <span class="my-2 block h-[2px] w-[30px] bg-slate-800 transition duration-300 ease-in-out origin-bottom-left"></span>
+          </button>
+
+          <nav
+            id="nav-menu"
+            class="hidden absolute py-5 dark:bg-gray-800 shadow-lg lg:shadow-purple-500/80 lg:hover:shadow-cyan-200/80 lg:transition lg:duration-200 lg:ease-in-out rounded-lg max-w-[250px] w-full right-0 top-full lg:block lg:bg-transparent lg:max-w-full lg:right-0 lg:-top-[4px]"
+          >
+            <ul class="block lg:flex lg:justify-center">
+              <li class="group">
+                <a href="index.html" class="text-base text-purple2 py-2 mx-8 font-bold group-hover:text-cyan-200 transition duration-200 flex">Home</a>
+              </li>
+              <li class="group">
+                <a href="project.html" class="text-base text-purple2 py-2 mx-8 font-bold transition duration-200 group-hover:text-cyan-200 flex">Project</a>
+              </li>
+              <li class="group">
+                <a href="contact.html" class="text-base text-purple2 py-2 mx-8 font-bold transition duration-200 group-hover:text-cyan-200 flex">Contact</a>
+              </li>
+              <li class="group">
+                <a href="nothing.html" class="text-base text-purple2 py-2 mx-8 font-bold transition duration-200 group-hover:text-cyan-200 flex">Nothing Here</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-36">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 lg:w-1/2">
+            <h1 class="text-base font-semibold text-cyan1 md:text-xl">Hi Let Me Introduce Myself <span class="block font-bold text-slate-900 text-4xl lg:text-5xl">Ali Akbar</span></h1>
+            <h2 class="font-medium text-slate-500 text-lg mb-5 lg:2xl:">Cyber Security</h2>
+            <p class="font-medium text-slate-400 mb-10 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, architecto.</p>
+
+            <a href="contact.html" class="text-base font-bold text-white bg-cyan1 py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Call your daddy here!</a>
+          </div>
+          <div class="w-full self-end px-4 lg:w-1/2">
+            <div class="relative mt-10 lg:mt-9 lg:mr-0">
+              <img src="img/2.png" alt="saya" class="max-w-full mx-auto" />
+              <span class="absolute bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-125">
+                <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="#06B6D4" d="M40.6,6.8C40.6,31.4,20.3,62.7,-6.1,62.7C-32.5,62.7,-64.9,31.4,-64.9,6.8C-64.9,-17.8,-32.5,-35.6,-6.1,-35.6C20.3,-35.6,40.6,-17.8,40.6,6.8Z" transform="translate(100 100) scale(1.2)" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-sky-900 pt-24 pb-12">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-12"></div>
+          <h4 class="font-semibold text-lg"></h4>
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
