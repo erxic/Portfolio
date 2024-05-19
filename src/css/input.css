@@ -7,7 +7,7 @@ body {
 }
 
 .navbar-fixed {
-  @apply fixed z-[99999] bg-gray-900 bg-opacity-70 backdrop-blur-sm;
+  @apply fixed z-[99999] bg-slate-300 lg:bg-gray-900 bg-opacity-70 backdrop-blur-sm;
 }
 
 .hamburger-active > span:nth-child(1) {

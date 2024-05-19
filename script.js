@@ -1,38 +1,41 @@
-// Data untuk animasi teks pada setiap elemen
-// Data untuk animasi teks pada setiap elemen
-const animations = [
-  {
-    element: document.getElementById("index-animate"),
-    text: "HI LET ME INTRODUCE MY SELF",
-    typingSpeed: 110,
-    charIndex: 0,
-  },
-  {
-    element: document.getElementById("project-animate"),
-    text: "PROJECT",
-    typingSpeed: 200,
-    charIndex: 0,
-  },
-];
+document.addEventListener("DOMContentLoaded", function () {
+  // Data untuk animasi teks pada setiap elemen
+  const animations = [
+    {
+      element: document.getElementById("index-animate"),
+      text: "HI LET ME INTRODUCE MY SELF",
+      typingSpeed: 110,
+      charIndex: 0,
+    },
+    {
+      element: document.getElementById("project-animate"),
+      text: "PROJECT",
+      typingSpeed: 200,
+      charIndex: 0,
+    },
+  ];
 
-// Fungsi untuk mengetik teks pada setiap elemen
-function typeText(index) {
-  const animation = animations[index];
-  const { element, text, typingSpeed, charIndex } = animation;
+  // Fungsi untuk mengetik teks pada setiap elemen
+  function typeText(animation) {
+    const { element, text, typingSpeed, charIndex } = animation;
 
-  if (charIndex < text.length) {
-    element.innerHTML = text.substring(0, charIndex + 1);
-    animation.charIndex++;
-    setTimeout(function () {
-      typeText(index);
-    }, typingSpeed);
+    if (element && charIndex < text.length) {
+      element.innerHTML = text.substring(0, charIndex + 1);
+      animation.charIndex++;
+      setTimeout(() => typeText(animation), typingSpeed);
+    }
   }
-}
 
-// Memanggil fungsi typeText untuk setiap animasi
-for (let i = 0; i < animations.length; i++) {
-  typeText(i);
-}
+  // Memanggil fungsi typeText untuk setiap animasi jika elemennya ada
+  animations.forEach((animation) => {
+    if (animation.element) {
+      console.log(`Starting animation for element with text: ${animation.text}`);
+      typeText(animation);
+    } else {
+      console.warn(`Element not found for text: ${animation.text}`);
+    }
+  });
+});
 
 // Navbar Fixed
 window.onscroll = function () {

@@ -8,7 +8,62 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css\style.css" />
-    <title>The Damn Portofolio</title>
+    <title>Hacked By Anonymous</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: url(".\\img\\HBGary-Federal-Defacement.jpg") no-repeat center center fixed;
+        background-size: cover;
+        color: lime;
+        font-family: "Courier New", Courier, monospace;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        text-align: center;
+        backdrop-filter: blur(2px);
+      }
+      .content {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 50px;
+        border-radius: 10px;
+      }
+      .hacked-message {
+        font-size: 3rem;
+        animation: blink 1s steps(2, start) infinite;
+      }
+      .error-code {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+      .message {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+      .console {
+        font-size: 1.2rem;
+        color: lime;
+      }
+      .cursor {
+        display: inline-block;
+        width: 10px;
+        background-color: lime;
+        margin-left: 5px;
+        animation: blink-cursor 0.7s steps(1) infinite;
+      }
+      @keyframes blink-cursor {
+        0%,
+        50% {
+          opacity: 1;
+        }
+        50%,
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
   </head>
   <body style="height: 700px">
     <!-- Header Nav -->
@@ -48,6 +103,29 @@
         </div>
       </div>
     </header>
+
+    <div class="content">
+      <div class="error-code hacked-message">ERROR 404</div>
+      <div class="message">Hacked By Anonymous</div>
+      <div class="console"><span id="console-text"></span><span class="cursor">|</span></div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const text = "This Website has been Hacked!";
+        let index = 0;
+        const typingSpeed = 150;
+
+        function typeText() {
+          if (index < text.length) {
+            document.getElementById("console-text").innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeText, typingSpeed);
+          }
+        }
+
+        typeText();
+      });
+    </script>
 
     <script src="./script.js"></script>
   </body>
