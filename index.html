@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMSOBfZ5IV1qJ63KNA69iYz3oYFQcNwojj+8i8z" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css\style.css" />
     <title>The Damn Portfolio</title>
@@ -16,7 +17,7 @@
       <div class="container">
         <div class="flex items-center justify-between relative">
           <div class="px-4">
-            <a href="index.html" class="font-bold text-lg lg:text-purple2 text-slate-900 block py-6 lg:right-0">My Journey</a>
+            <a href="index.html" class="font-bold text-lg lg:text-purple2 text-slate-700 block py-6 lg:right-0 cursor-pointer">My Journey</a>
           </div>
         </div>
         <div class="flex items-center px-4">
@@ -48,22 +49,33 @@
         </div>
       </div>
     </header>
+    <!-- Intro section -->
+    <section class="bg-gray-900 text-left py-36">
+      <div class="container">
+        <h1 class="font-bold font-mono text-xl text-purple2 md:text-xl"><span id="index-animate"></span><span class="cursor">|</span></h1>
+      </div>
+    </section>
+    <!-- End of intro section -->
 
     <!-- Hero Section -->
-    <section id="home" class="pt-36">
+    <section id="home" class="bg-gray-900 lg:pt-[163px]">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2">
-            <h1 class="text-base font-semibold text-cyan1 md:text-xl">Hi Let Me Introduce Myself <span class="block font-bold text-slate-900 text-4xl lg:text-5xl">Ali Akbar</span></h1>
-            <h2 class="font-medium text-slate-500 text-lg mb-5 lg:2xl:">Cyber Security</h2>
-            <p class="font-medium text-slate-400 mb-10 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, architecto.</p>
+            <span class="block font-bold text-slate-400 text-4xl lg:text-5xl">Ali Akbar</span>
+            <h2 class="font-semibold text-slate-200 text-lg mb-5 lg:text-2xl">Cyber Security</h2>
+            <p class="font-medium text-slate-300 mb-10 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, architecto.</p>
 
-            <a href="contact.html" class="text-base font-bold text-white bg-cyan1 py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Call your daddy here!</a>
+            <a
+              href="contact.html"
+              class="text-base font-bold text-slate-200 bg-purple3 py-3 px-8 rounded-full shadow-lg shadow-purple-500/80 hover:bg-cyan1 hover:shadow-cyan1/80 hover:shadow-lg hover:bg-opacity-60 transition duration-300 ease-in-out"
+              >Call your daddy here!</a
+            >
           </div>
           <div class="w-full self-end px-4 lg:w-1/2">
             <div class="relative mt-10 lg:mt-9 lg:mr-0">
               <img src="img/2.png" alt="saya" class="max-w-full mx-auto" />
-              <span class="absolute bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-125">
+              <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 md:scale-125" style="z-index: -1">
                 <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                   <path fill="#06B6D4" d="M40.6,6.8C40.6,31.4,20.3,62.7,-6.1,62.7C-32.5,62.7,-64.9,31.4,-64.9,6.8C-64.9,-17.8,-32.5,-35.6,-6.1,-35.6C20.3,-35.6,40.6,-17.8,40.6,6.8Z" transform="translate(100 100) scale(1.2)" />
                 </svg>
@@ -75,11 +87,42 @@
     </section>
 
     <!-- footer -->
-    <footer class="bg-sky-900 pt-24 pb-12">
-      <div class="container">
-        <div class="flex flex-wrap">
-          <div class="w-full px-4 mb-12"></div>
-          <h4 class="font-semibold text-lg"></h4>
+    <footer class="bg-cyan-900 text-white py-12 mt-auto">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center">
+          <h4 class="font-medium text-lg text-slate-100">© 2024 Erxic Company, Inc. All Rights Reserved</h4>
+          <div class="flex space-x-3 items-center">
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/@erxic" target="_blank" class="w-11 h-8 bg-slate-100 hover:bg-slate-600 hover:shadow-white hover:shadow-md flex justify-center items-center transition duration-300 ease-in-out rounded-full">
+              <svg role="img" width="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>YouTube</title>
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                />
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/erxic99" target="_blank" class="w-11 h-8 bg-slate-100 hover:bg-slate-600 hover:shadow-white hover:shadow-md flex justify-center items-center transition duration-300 ease-in-out rounded-full">
+              <svg role="img" width="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>Instagram</title>
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.423.403a4.92 4.92 0 0 1 1.751 1.142 4.92 4.92 0 0 1 1.142 1.751c.163.452.349 1.252.403 2.422.058 1.266.07 1.646.07 4.851 0 3.204-.012 3.584-.07 4.85-.054 1.17-.24 1.97-.403 2.423a4.902 4.902 0 0 1-1.142 1.751 4.918 4.918 0 0 1-1.751 1.142c-.452.163-1.252.349-2.422.403-1.267.058-1.647.07-4.851.07-3.204 0-3.584-.012-4.85-.07-1.17-.054-1.97-.24-2.423-.403a4.92 4.92 0 0 1-1.751-1.142 4.92 4.92 0 0 1-1.142-1.751c-.163-.452-.349-1.252-.403-2.422C2.175 15.584 2.163 15.204 2.163 12c0-3.204.012-3.584.07-4.85.054-1.17.24-1.97.403-2.423a4.92 4.92 0 0 1 1.142-1.751 4.92 4.92 0 0 1 1.751-1.142c.452-.163 1.252-.349 2.422-.403 1.267-.058 1.647-.07 4.851-.07zm0-2.163C8.735 0 8.332 0 7.052.073c-1.276.074-2.164.337-2.906.654a6.889 6.889 0 0 0-2.497 1.636A6.889 6.889 0 0 0 .073 4.198c-.317.742-.58 1.63-.654 2.906C0 8.332 0 8.735 0 12c0 3.265.073 3.668.073 4.948.074 1.276.337 2.164.654 2.906a6.889 6.889 0 0 0 1.636 2.497 6.889 6.889 0 0 0 2.497 1.636c.742.317 1.63.58 2.906.654C8.332 24 8.735 24 12 24c3.265 0 3.668-.073 4.948-.073 1.276-.074 2.164-.337 2.906-.654a6.889 6.889 0 0 0 2.497-1.636 6.889 6.889 0 0 0 1.636-2.497c.317-.742.58-1.63.654-2.906.073-1.28.073-1.683.073-4.948 0-3.265-.073-3.668-.073-4.948-.074-1.276-.337-2.164-.654-2.906a6.889 6.889 0 0 0-1.636-2.497 6.889 6.889 0 0 0-2.497-1.636c-.742-.317-1.63-.58-2.906-.654C15.668 0 15.265 0 12 0z"
+                />
+                <path
+                  d="M12 5.838A6.162 6.162 0 0 0 5.838 12 6.162 6.162 0 0 0 12 18.162 6.162 6.162 0 0 0 18.162 12 6.162 6.162 0 0 0 12 5.838zm0 10.162A4.002 4.002 0 0 1 8 12a4.002 4.002 0 0 1 4-4 4.002 4.002 0 0 1 4 4 4.002 4.002 0 0 1-4 4zm6.406-11.845a1.44 1.44 0 1 0 0-2.88 1.44 1.44 0 0 0 0 2.88z"
+                />
+              </svg>
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com/erxic" target="_blank" class="w-11 h-8 bg-slate-100 hover:bg-slate-600 hover:shadow-white hover:shadow-md flex justify-center items-center transition duration-300 ease-in-out rounded-full">
+              <svg role="img" width="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>GitHub</title>
+                <path
+                  d="M12 2.3c-5.523 0-10 4.477-10 10 0 4.418 2.867 8.167 6.84 9.49.5.09.687-.218.687-.485 0-.237-.01-1.022-.014-1.854-2.782.604-3.369-1.34-3.369-1.34-.454-1.152-1.11-1.46-1.11-1.46-.908-.62.069-.607.069-.607 1.003.07 1.53 1.03 1.53 1.03.892 1.528 2.34 1.086 2.91.83.092-.647.35-1.085.635-1.336-2.22-.253-4.555-1.11-4.555-4.944 0-1.09.39-1.982 1.03-2.68-.103-.253-.447-1.27.097-2.646 0 0 .84-.27 2.75 1.025A9.563 9.563 0 0 1 12 6.844c.85.004 1.705.115 2.505.338 1.91-1.295 2.75-1.025 2.75-1.025.544 1.376.2 2.393.097 2.646.64.698 1.03 1.59 1.03 2.68 0 3.844-2.338 4.687-4.565 4.935.358.308.678.918.678 1.85 0 1.336-.012 2.415-.012 2.745 0 .27.184.58.694.482C19.136 20.46 22 16.72 22 12.3c0-5.523-4.478-10-10-10z"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
