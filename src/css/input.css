@@ -37,3 +37,39 @@ body {
     opacity: 0;
   }
 }
+
+a.button {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Responsive button styling */
+@media (max-width: 640px) {
+  a.button {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+}
+
+/* Ensure SVG visibility and proper scaling */
+.relative-svg-container {
+  position: relative;
+}
+
+.relative-svg-container img {
+  display: block;
+  margin: 0 auto;
+  position: relative; /* Ensure the image is above the SVG */
+  z-index: 1; /* Higher z-index to be on top */
+}
+
+.relative-svg-container svg {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(1); /* Ensure the SVG maintains its size */
+  z-index: 0; /* Lower z-index to be behind */
+}
