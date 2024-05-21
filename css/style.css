@@ -672,6 +672,10 @@ video {
   display: block;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .flex {
   display: flex;
 }
@@ -690,6 +694,10 @@ video {
 
 .h-\[2px\] {
   height: 2px;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-11 {
@@ -716,6 +724,10 @@ video {
   max-width: 36rem;
 }
 
+.flex-grow {
+  flex-grow: 1;
+}
+
 .origin-bottom-left {
   transform-origin: bottom left;
 }
@@ -731,6 +743,10 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .flex-wrap {
@@ -1270,6 +1286,10 @@ a.button {
 
   .lg\:block {
     display: block;
+  }
+
+  .lg\:inline-block {
+    display: inline-block;
   }
 
   .lg\:flex {
