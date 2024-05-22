@@ -73,3 +73,7 @@ a.button {
   transform: translateX(-50%) scale(1); /* Ensure the SVG maintains its size */
   z-index: 0; /* Lower z-index to be behind */
 }
+
+.text-newline {
+  display: block;
+}

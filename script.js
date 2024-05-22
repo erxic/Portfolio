@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const animations = [
     {
       element: document.getElementById("index-animate"),
-      text: "HI LET ME INTRODUCE MY SELF",
+      text: "Welcome to My Dream...\n I mean My World in Internet",
       typingSpeed: 110,
       charIndex: 0,
     },
@@ -20,7 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const { element, text, typingSpeed, charIndex } = animation;
 
     if (element && charIndex < text.length) {
-      element.innerHTML = text.substring(0, charIndex + 1);
+      // Handle newline characters by adding <br>
+      if (text.charAt(charIndex) === "\n") {
+        element.innerHTML += "<br>";
+      } else {
+        element.innerHTML += text.charAt(charIndex);
+      }
+
       animation.charIndex++;
       setTimeout(() => typeText(animation), typingSpeed);
     }
@@ -29,10 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Memanggil fungsi typeText untuk setiap animasi jika elemennya ada
   animations.forEach((animation) => {
     if (animation.element) {
-      console.log(`Starting animation for element with text: ${animation.text}`);
       typeText(animation);
-    } else {
-      console.warn(`Element not found for text: ${animation.text}`);
     }
   });
 });
@@ -65,32 +68,3 @@ window.addEventListener("click", function (e) {
     navMenu.classList.add("hidden");
   }
 });
-
-//contact
-// document.getElementById("contact-form").addEventListener("submit", function (event) {
-//   event.preventDefault(); // Prevent the default form submission
-
-//   const formData = new FormData(this);
-
-//   fetch(this.action, {
-//     method: this.method,
-//     body: formData,
-//     headers: {
-//       Accept: "application/json",
-//     },
-//   })
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw new Error("Network response was not ok " + response.statusText);
-//       }
-//       return response.json(); // Parse response as JSON
-//     })
-//     .then((data) => {
-//       alert("Your message has been sent successfully!");
-//       this.reset(); // Reset the form
-//     })
-//     .catch((error) => {
-//       alert("There was an error sending your message. Please try again.");
-//       console.error("Error:", error);
-//     });
-// });
