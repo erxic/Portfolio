@@ -67,30 +67,30 @@ window.addEventListener("click", function (e) {
 });
 
 //contact
-document.getElementById("contact-form").addEventListener("submit", function (event) {
-  event.preventDefault(); // Prevent the default form submission
+// document.getElementById("contact-form").addEventListener("submit", function (event) {
+//   event.preventDefault(); // Prevent the default form submission
 
-  const formData = new FormData(this);
+//   const formData = new FormData(this);
 
-  fetch(this.action, {
-    method: this.method,
-    body: formData,
-    headers: {
-      Accept: "application/json",
-    },
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok " + response.statusText);
-      }
-      return response.json(); // Parse response as JSON
-    })
-    .then((data) => {
-      alert("Your message has been sent successfully!");
-      this.reset(); // Reset the form
-    })
-    .catch((error) => {
-      alert("There was an error sending your message. Please try again.");
-      console.error("Error:", error);
-    });
-});
+//   fetch(this.action, {
+//     method: this.method,
+//     body: formData,
+//     headers: {
+//       Accept: "application/json",
+//     },
+//   })
+//     .then((response) => {
+//       if (!response.ok) {
+//         throw new Error("Network response was not ok " + response.statusText);
+//       }
+//       return response.json(); // Parse response as JSON
+//     })
+//     .then((data) => {
+//       alert("Your message has been sent successfully!");
+//       this.reset(); // Reset the form
+//     })
+//     .catch((error) => {
+//       alert("There was an error sending your message. Please try again.");
+//       console.error("Error:", error);
+//     });
+// });
