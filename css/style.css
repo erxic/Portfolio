@@ -1099,10 +1099,15 @@ body {
 }
 
 a.button {
-  display: block;
+  display: inline-block;
   text-align: center;
   text-decoration: none;
-  padding: 2rem;
+  padding: 1rem 2rem;
+  /* Adjust padding as necessary */
+  margin: 0.5rem 0;
+  /* Add margin if necessary */
+  cursor: pointer;
+  /* Add pointer cursor */
 }
 
 /* Responsive button styling */
@@ -1112,7 +1117,6 @@ a.button {
     width: 100%;
     padding: 1rem;
     box-sizing: border-box;
-    display: block;
   }
 }
 
