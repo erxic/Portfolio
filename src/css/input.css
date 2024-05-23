@@ -43,8 +43,7 @@ a.button {
   display: block;
   text-align: center;
   text-decoration: none;
-  white-space: nowrap;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 /* Responsive button styling */
