@@ -6,6 +6,15 @@ body {
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
 }
+.container {
+  overflow: hidden;
+}
+
+.container,
+.relative-svg-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 .navbar-fixed {
   @apply fixed z-[99999] bg-slate-300 lg:bg-gray-900 bg-opacity-70 backdrop-blur-sm;
@@ -43,9 +52,9 @@ a.button {
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  padding: 1rem 2rem; /* Adjust padding as necessary */
-  margin: 0.5rem 0; /* Add margin if necessary */
-  cursor: pointer; /* Add pointer cursor */
+  padding: 1rem 2rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
 }
 
 /* Responsive button styling */
@@ -66,13 +75,18 @@ a.button {
   display: block;
   margin: 0 auto;
   position: relative; /* Ensure the image is above the SVG */
-  z-index: 1; /* Higher z-index to be on top */
+  z-index: 99; /* Higher z-index to be on top */
 }
 
 .relative-svg-container svg {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) scale(1); /* Ensure the SVG maintains its size */
-  z-index: 0; /* Lower z-index to be behind */
+  bottom: 0; /* Menempatkan SVG di bagian bawah container */
+  left: 50%; /* Menempatkan SVG di tengah horizontal */
+  transform: translateX(-50%); /* Menggeser SVG ke kiri sejauh setengah lebar container */
+  z-index: -1; /* Memastikan SVG berada di belakang teks */
+}
+
+.line-break::after {
+  content: "";
+  display: block;
 }

@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (element && charIndex < text.length) {
       // Handle newline characters by adding <br>
       if (text.charAt(charIndex) === "\n") {
-        element.innerHTML += "<br>";
+        element.innerHTML += "<span class='line-break'></span>";
       } else {
         element.innerHTML += text.charAt(charIndex);
       }
